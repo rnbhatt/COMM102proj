@@ -29,11 +29,7 @@
             grid-template-columns: 1fr 1fr;
             width: 100%;
         }
-        @media only screen and (max-width: 700px){
-            section{
-                grid-template-columns: 1fr;
-            }
-        }
+       
         body{
             margin: 0px;
         }
@@ -102,6 +98,29 @@
         .img-container{
             padding: 10px;
         }
+        .info{
+            font-size: 10px;
+            max-width: 300px;
+            display:block;
+            margin: auto;
+        }
+        .big{
+            font-size: 1.5em;
+        }
+        .vanish{
+            display:none;
+        }
+        @media only screen and (max-width: 700px){
+            section{
+                grid-template-columns: 1fr;
+            }
+            .big{
+                font-size: 1em;
+            }
+            .vanish{
+                display: unset;
+            }
+        }
     </style>
     <body style="background-color:rgb(15,15,15)">
         <h1 style="margin-top:35px">Bulletphone</h1>
@@ -110,20 +129,23 @@
                 <img src="render_splash.png" class="titleimage">
             </div>
             <div>
-                <div class="inset">
+                <div class="inset big">
                     <h2>Built for the real world.</h2>
                     <p>
                         Dust, dirt, rocks, water, you name it, we can take it, or your money back.
                     </p>
                     <p>
-                        We build to last. The Bulletphone is ready for your rugged lifestyle.
+                        We build to last.
+                    </p>
+                    <p>
+                        The Bulletphone is ready for your rugged lifestyle.
                     </p>
                 </inset>
             </div>
         </section>
         <section style="background-color:rgb(15,15,15)">
             <div>
-                <div class="inset">                
+                <div class="inset big">                
                     <h2>Connected, no matter where.</h2>
                     <p>
                         Mainstream cell phone companies overlook your areas. 
@@ -143,11 +165,10 @@
             </div>    
         </section>
         <section style="background-color:rgb(51, 51, 51)">
-            <div>
-                <img style="max-width:200px" class="titleimage" src="lock.svg">
+            <div style="background-image:url('lock.svg'); background-repeat: no-repeat;background-position: center; " class="dvanish">
             </div>
             <div>
-                <div class="inset">
+                <div class="inset big">
                     <h2>Private and Secure.</h2>
                     <p>
                         Other companies track your every move and report it to governments, advertisers, and all
@@ -190,7 +211,7 @@
                     </h3>
                 </div>
                 <div class="centertext">
-                    We don't do enormous markups. 
+                    We don't do enormous markups. A practical product deserves a practical price
                 </div>
             </div>
         </div>
@@ -202,6 +223,14 @@
             <p style="text-align:center">
                 <button class="reservebtn" onclick="alert('This button would navigate to a registration page')">Reserve</button>
             </p>
+            <div class="info">
+                <b>How it works</b>
+                <p>
+                    When you press Reserve, you'll be added to our queue after paying a small, refundable reservation fee.
+                    Then when you reach the front of the line, you'll be given a 2-day window to purchase the unit reserved
+                    for you, with the reservation fee deducted. 
+                </p> 
+            </div>
             <p style="text-align:center">
                 Not sure? Sign up for our mailing list for more info!
                 <input style="color:black" placeholder="name@example.com"></input><button style="color:black"  onclick="alert('This would add the email to the mailing list')">Sign up</button>
